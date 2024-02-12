@@ -502,7 +502,7 @@ CloseMain_2.TextWrapped = true
 
 -- Scripts:
 
-local function TUWTJXJ_fake_script() -- ImageLabel.LocalScript 
+local function CWSOPN_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local Players = game:GetService("Players")
@@ -520,8 +520,8 @@ local function TUWTJXJ_fake_script() -- ImageLabel.LocalScript
 	imageLabel.Image = content
 	imageLabel.Size = UDim2.new(0, 126,0, 119)
 end
-coroutine.wrap(TUWTJXJ_fake_script)()
-local function ZLVS_fake_script() -- TextLabel_3.LocalScript 
+coroutine.wrap(CWSOPN_fake_script)()
+local function LLDWM_fake_script() -- TextLabel_3.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	local player = game.Players.LocalPlayer
@@ -535,8 +535,8 @@ local function ZLVS_fake_script() -- TextLabel_3.LocalScript
 	script.Parent.Text = playerName
 	
 end
-coroutine.wrap(ZLVS_fake_script)()
-local function OQGH_fake_script() -- CloseMain.LocalScript 
+coroutine.wrap(LLDWM_fake_script)()
+local function SVMX_fake_script() -- CloseMain.LocalScript 
 	local script = Instance.new('LocalScript', CloseMain)
 
 	local frame = script.Parent.Parent
@@ -546,8 +546,8 @@ local function OQGH_fake_script() -- CloseMain.LocalScript
 	end)
 	
 end
-coroutine.wrap(OQGH_fake_script)()
-local function UEGF_fake_script() -- Script.LocalScript 
+coroutine.wrap(SVMX_fake_script)()
+local function IIMJA_fake_script() -- Script.LocalScript 
 	local script = Instance.new('LocalScript', Script)
 
 	local frame = script.Parent.Parent.ScriptsF
@@ -556,8 +556,8 @@ local function UEGF_fake_script() -- Script.LocalScript
 		frame.Visible = true
 	end)
 end
-coroutine.wrap(UEGF_fake_script)()
-local function OKRH_fake_script() -- CloseScripts.LocalScript 
+coroutine.wrap(IIMJA_fake_script)()
+local function BKBTF_fake_script() -- CloseScripts.LocalScript 
 	local script = Instance.new('LocalScript', CloseScripts)
 
 	local frame = script.Parent.Parent
@@ -567,8 +567,8 @@ local function OKRH_fake_script() -- CloseScripts.LocalScript
 	end)
 	
 end
-coroutine.wrap(OKRH_fake_script)()
-local function NWGCZH_fake_script() -- Bang.LocalScript 
+coroutine.wrap(BKBTF_fake_script)()
+local function ERYKI_fake_script() -- Bang.LocalScript 
 	local script = Instance.new('LocalScript', Bang)
 
 	local frame = script.Parent.Parent.BANGF
@@ -577,8 +577,8 @@ local function NWGCZH_fake_script() -- Bang.LocalScript
 		frame.Visible = true
 	end)
 end
-coroutine.wrap(NWGCZH_fake_script)()
-local function AZSSP_fake_script() -- MainB.LocalScript 
+coroutine.wrap(ERYKI_fake_script)()
+local function AUPU_fake_script() -- MainB.LocalScript 
 	local script = Instance.new('LocalScript', MainB)
 
 	local frame = script.Parent.Parent.Main
@@ -587,8 +587,8 @@ local function AZSSP_fake_script() -- MainB.LocalScript
 		frame.Visible = true
 	end)
 end
-coroutine.wrap(AZSSP_fake_script)()
-local function WONO_fake_script() -- Teleport.LocalScript 
+coroutine.wrap(AUPU_fake_script)()
+local function FKOVB_fake_script() -- Teleport.LocalScript 
 	local script = Instance.new('LocalScript', Teleport)
 
 	local frame = script.Parent.Parent.TPF
@@ -597,8 +597,8 @@ local function WONO_fake_script() -- Teleport.LocalScript
 		frame.Visible = true
 	end)
 end
-coroutine.wrap(WONO_fake_script)()
-local function WSDTQF_fake_script() -- TPB.LocalScript 
+coroutine.wrap(FKOVB_fake_script)()
+local function YPRGHB_fake_script() -- TPB.LocalScript 
 	local script = Instance.new('LocalScript', TPB)
 
 	local playerName = PlayerTp.Text
@@ -615,8 +615,8 @@ local function WSDTQF_fake_script() -- TPB.LocalScript
 		end
 	end
 end
-coroutine.wrap(WSDTQF_fake_script)()
-local function TUZPWM_fake_script() -- CloseScripts_2.LocalScript 
+coroutine.wrap(YPRGHB_fake_script)()
+local function VHYW_fake_script() -- CloseScripts_2.LocalScript 
 	local script = Instance.new('LocalScript', CloseScripts_2)
 
 	local frame = script.Parent.Parent
@@ -626,8 +626,8 @@ local function TUZPWM_fake_script() -- CloseScripts_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(TUZPWM_fake_script)()
-local function OFUZHJI_fake_script() -- btnsex.LocalScript 
+coroutine.wrap(VHYW_fake_script)()
+local function OQQBHK_fake_script() -- btnsex.LocalScript 
 	local script = Instance.new('LocalScript', btnsex)
 
 	local hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
@@ -653,19 +653,19 @@ local function OFUZHJI_fake_script() -- btnsex.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OFUZHJI_fake_script)()
-local function YTDGPDK_fake_script() -- CloseMain_2.LocalScript 
+coroutine.wrap(OQQBHK_fake_script)()
+local function DMEN_fake_script() -- CloseMain_2.LocalScript 
 	local script = Instance.new('LocalScript', CloseMain_2)
 
-	local frame = script.Parent.Parent
+	local frame = script.Parent.Parent.BANGF
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		frame.Visible = false
 	end)
 	
 end
-coroutine.wrap(YTDGPDK_fake_script)()
-local function ZAVWMA_fake_script() -- ScreenGui.Script 
+coroutine.wrap(DMEN_fake_script)()
+local function EHZDJCA_fake_script() -- ScreenGui.Script 
 	local script = Instance.new('Script', ScreenGui)
 
 	frame = script.Parent.	Frame -- Take out {}s, and put name of frame
@@ -673,4 +673,4 @@ local function ZAVWMA_fake_script() -- ScreenGui.Script
 	frame.Active = true
 	frame.Selectable = true
 end
-coroutine.wrap(ZAVWMA_fake_script)()
+coroutine.wrap(EHZDJCA_fake_script)()

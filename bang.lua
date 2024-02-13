@@ -114,33 +114,5 @@ btnsex.MouseButton1Down:Connect(function()
 	end)
 end)
 
--- Scripts:
-
-local function RDHI_fake_script() -- btnsex.LocalScript 
-	local script = Instance.new('LocalScript', btnsex)
-	local hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
-	
-	btnSex.MouseButton1Click:Connect(function()
-	
-		local player = tbxVictim.Text
-		local stupid = Instance.new('Animation')
-		stupid.AnimationId = 'rbxassetid://148840371'
-		hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
-		pcall(function()
-			hummy.Parent.Pants:Destroy()
-		end)
-		pcall(function()
-			hummy.Parent.Shirt:Destroy()
-		end)
-		local notfunny = hummy:LoadAnimation(stupid)
-		notfunny:Play()
-		notfunny:AdjustSpeed(10)
-		while hummy.Parent.Parent ~= nil do
-			wait()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[tbxVictim.Text].Character.HumanoidRootPart.CFrame
-		end
-	end)
-	
-end
 	
 coroutine.wrap(RDHI_fake_script)()

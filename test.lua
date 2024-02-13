@@ -485,20 +485,50 @@ btnsex.TextScaled = true
 btnsex.TextSize = 14.000
 btnsex.TextWrapped = true
 
-CloseBANGF.Name = "CloseBANGF"
-CloseBANGF.Parent = BANGF
-CloseBANGF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-CloseBANGF.BackgroundTransparency = 1.000
-CloseBANGF.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CloseBANGF.BorderSizePixel = 0
-CloseBANGF.Position = UDim2.new(0.899509788, 0, 0.0283400808, 0)
-CloseBANGF.Size = UDim2.new(0, 32, 0, 36)
-CloseBANGF.Font = Enum.Font.SourceSans
-CloseBANGF.Text = "X"
-CloseBANGF.TextColor3 = Color3.fromRGB(0, 0, 0)
-CloseBANGF.TextScaled = true
-CloseBANGF.TextSize = 14.000
-CloseBANGF.TextWrapped = true
+btnsex.MouseButton1Down:connect(function()
+ 
+ local player = tbxVictim.Text
+local stupid = Instance.new('Animation')
+stupid.AnimationId = 'rbxassetid://148840371'
+hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
+pcall(function()
+    hummy.Parent.Pants:Destroy()
+end)
+pcall(function()
+    hummy.Parent.Shirt:Destroy()
+end)
+local notfunny = hummy:LoadAnimation(stupid)
+notfunny:Play()
+notfunny:AdjustSpeed(10)
+while hummy.Parent.Parent ~= nil do
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[tbxVictim.Text].Character.HumanoidRootPart.CFrame
+end
+ 
+end)
+
+local CloseButton = Instance.new("TextButton")
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = BANGF
+CloseButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CloseButton.BackgroundTransparency = 1.000
+CloseButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CloseButton.BorderSizePixel = 0
+CloseButton.Position = UDim2.new(0.899509788, 0, 0.0283400808, 0)
+CloseButton.Size = UDim2.new(0, 32, 0, 36)
+CloseButton.Font = Enum.Font.SourceSans
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+CloseButton.TextScaled = true
+CloseButton.TextSize = 14.000
+CloseButton.TextWrapped = true
+
+CloseButton.MouseButton1Down:Connect(function()
+
+    Frame.Visible = false
+end)
+
+
 
 -- Scripts:
 
@@ -601,7 +631,7 @@ coroutine.wrap(VLMWER_fake_script)()
 local function PVBC_fake_script() -- TPB.LocalScript 
 	local script = Instance.new('LocalScript', TPB)
 
-	local playerName = PlayerTp.Text
+	local playerName = script.Parent.PlayerTp.Text
 	local players = game:GetService("Players"):GetPlayers()
 	for i, player in ipairs(players) do
 		if player.Name:sub(1, #playerName):lower() == playerName:lower() then
@@ -627,19 +657,16 @@ local function NDSNGAF_fake_script() -- CloseScripts_2.LocalScript
 	
 end
 coroutine.wrap(NDSNGAF_fake_script)()
-local function KUXB_fake_script() -- btnsex.Script 
-	local script = Instance.new('Script', btnsex)
+local function KUXB_fake_script() -- btnSex.Script 
+	local script = Instance.new('Script', btnSex)
 
-	btnsex.MouseButton1Down:connect(function()
-		btnsex.MouseButton1Down:Connect(function()
-	local hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
+	script.Parent.MouseButton1Click:Connect(function()
+		local hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
 
-	btnSex.MouseButton1Click:Connect(function()
-
-		local player = tbxVictim.Text
+		local player = script.Parent.Parent.tbxVictim.Text
 		local stupid = Instance.new('Animation')
 		stupid.AnimationId = 'rbxassetid://148840371'
-		hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
+		hummy = game:GetService("Players")[player].Character.Humanoid
 		pcall(function()
 			hummy.Parent.Pants:Destroy()
 		end)
@@ -651,10 +678,9 @@ local function KUXB_fake_script() -- btnsex.Script
 		notfunny:AdjustSpeed(10)
 		while hummy.Parent.Parent ~= nil do
 			wait()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[tbxVictim.Text].Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[player].Character.HumanoidRootPart.CFrame
 		end
 	end)
-end)
 	
 end
 coroutine.wrap(KUXB_fake_script)()
@@ -672,7 +698,7 @@ coroutine.wrap(VMAVDWZ_fake_script)()
 local function LZDCQ_fake_script() -- ScreenGui.Script 
 	local script = Instance.new('Script', ScreenGui)
 
-	frame = script.Parent.	Frame -- Take out {}s, and put name of frame
+	frame = script.Parent.Frame 
 	frame.Draggable = true
 	frame.Active = true
 	frame.Selectable = true

@@ -79,20 +79,10 @@ btnsex.TextWrapped = true
 
 UICorner_3.Parent = btnsex
 
-ImageButton.Parent = Frame
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(-0.609341204, 0, 0.337789655, 0)
-ImageButton.Size = UDim2.new(0, 100, 0, 100)
-ImageButton.Image = "rbxassetid://16354093539"
-
-UICorner_4.Parent = ImageButton
-
 btnsex.MouseButton1Down:Connect(function()
 	local hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
 
-	btnSex.MouseButton1Click:Connect(function()
+	btnsex.MouseButton1Click:Connect(function()
 
 		local player = tbxVictim.Text
 		local stupid = Instance.new('Animation')
@@ -113,6 +103,17 @@ btnsex.MouseButton1Down:Connect(function()
 		end
 	end)
 end)
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(-0.609341204, 0, 0.337789655, 0)
+ImageButton.Size = UDim2.new(0, 100, 0, 100)
+ImageButton.Image = "rbxassetid://16354093539"
+
+UICorner_4.Parent = ImageButton
+
 
 	
 coroutine.wrap(RDHI_fake_script)()

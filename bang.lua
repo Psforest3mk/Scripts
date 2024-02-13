@@ -12,8 +12,6 @@ local tbxVictim = Instance.new("TextBox")
 local UICorner_2 = Instance.new("UICorner")
 local btnsex = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
-local ImageButton = Instance.new("ImageButton")
-local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
 
@@ -30,6 +28,10 @@ UICorner.Parent = Frame
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.62, Color3.fromRGB(0, 255, 51)), ColorSequenceKeypoint.new(0.99, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
 UIGradient.Parent = Frame
+
+Frame.Active = true
+Frame.Draggable = true
+Frame.Parent = ScreenGui
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -104,16 +106,4 @@ btnsex.MouseButton1Down:Connect(function()
 	end)
 end)
 
-ImageButton.Parent = Frame
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(-0.609341204, 0, 0.337789655, 0)
-ImageButton.Size = UDim2.new(0, 100, 0, 100)
-ImageButton.Image = "rbxassetid://16354093539"
-
-UICorner_4.Parent = ImageButton
-
-
-	
-coroutine.wrap(RDHI_fake_script)()
+coroutine.wrap(TDQPAX_fake_script)()

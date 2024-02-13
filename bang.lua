@@ -32,7 +32,7 @@ UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.from
 UIGradient.Parent = Frame
 Frame.Active = true
 Frame.Draggable = true
-Frame.Parent = gui
+Frame.Parent = ScreenGui
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)

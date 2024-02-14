@@ -26,6 +26,10 @@ Frame.Size = UDim2.new(0, 398, 0, 227)
 
 UICorner.Parent = Frame
 
+Frame.Active = true
+Frame.Draggable = true
+Frame.Parent = gui
+
 TPbox.Name = "TPbox"
 TPbox.Parent = Frame
 TPbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)

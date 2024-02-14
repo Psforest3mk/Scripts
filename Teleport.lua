@@ -42,6 +42,22 @@ TPbox.TextWrapped = true
 
 UICorner_2.Parent = TPbox
 
+TPB.MouseButton1Down:Connect(function()
+	local playerName = TPbox.Text
+	local players = game:GetService("Players"):GetPlayers()
+	for i, player in ipairs(players) do
+		if player.Name:sub(1, #playerName):lower() == playerName:lower() then
+			game.Players.LocalPlayer.Character:MoveTo(player.Character.HumanoidRootPart.Position)
+			game:GetService("StarterGui"):SetCore("SendNotification",{
+				Title = "تم نقلك عند الاعب";
+				Text = "";
+				Duration = 3.5;
+			})
+			break
+		end
+	end
+end)
+
 TPB.Name = "TPB"
 TPB.Parent = Frame
 TPB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)

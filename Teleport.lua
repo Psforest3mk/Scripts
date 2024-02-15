@@ -8,9 +8,9 @@ local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local UICorner_2 = Instance.new("UICorner")
-local TPB = Instance.new("TextButton")
+local teleportB = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
-local TPbox = Instance.new("TextBox")
+local TeleportB = Instance.new("TextBox")
 local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
@@ -25,10 +25,6 @@ Frame.Position = UDim2.new(0.223362938, 0, 0.317103118, 0)
 Frame.Size = UDim2.new(0, 398, 0, 227)
 
 UICorner.Parent = Frame
-
-Frame.Active = true
-Frame.Draggable = true
-Frame.Parent = ScreenGui
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -47,53 +43,78 @@ TextLabel.TextWrapped = true
 
 UICorner_2.Parent = TextLabel
 
-TPB.Name = "TPB"
-TPB.Parent = Frame
-TPB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TPB.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TPB.BorderSizePixel = 0
-TPB.Position = UDim2.new(0.273467779, 0, 0.73302418, 0)
-TPB.Size = UDim2.new(0, 200, 0, 50)
-TPB.Font = Enum.Font.SourceSansBold
-TPB.Text = "go to player"
-TPB.TextColor3 = Color3.fromRGB(0, 0, 0)
-TPB.TextScaled = true
-TPB.TextSize = 14.000
-TPB.TextWrapped = true
+teleportB.Name = "teleportB"
+teleportB.Parent = Frame
+teleportB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+teleportB.BorderColor3 = Color3.fromRGB(0, 0, 0)
+teleportB.BorderSizePixel = 0
+teleportB.Position = UDim2.new(0.273467779, 0, 0.73302418, 0)
+teleportB.Size = UDim2.new(0, 200, 0, 50)
+teleportB.Font = Enum.Font.SourceSansBold
+teleportB.Text = "go to player"
+teleportB.TextColor3 = Color3.fromRGB(0, 0, 0)
+teleportB.TextScaled = true
+teleportB.TextSize = 14.000
+teleportB.TextWrapped = true
 
-UICorner_3.Parent = TPB
+UICorner_3.Parent = teleportB
 
-TPB.MouseButton1Down:Connect(function
-
-    local playerName = TPbox.Text
-	local players = game:GetService("Players"):GetPlayers()
-	for i, player in ipairs(players) do
-		if player.Name:sub(1, #playerName):lower() == playerName:lower() then
-			game.Players.LocalPlayer.Character:MoveTo(player.Character.HumanoidRootPart.Position)
-			game:GetService("StarterGui"):SetCore("SendNotification",{
-				Title = "تم نقلك عند الاعب";
-				Text = "";
-				Duration = 3.5;
-			})
-			break
+teleportB.MouseButton1Down:content(function
+	
+		local playerName = TeleportB.Text
+		local players = game:GetService("Players"):GetPlayers()
+		for i, player in ipairs(players) do
+			if player.Name:sub(1, #playerName):lower() == playerName:lower() then
+				game.Players.LocalPlayer.Character:MoveTo(player.Character.HumanoidRootPart.Position)
+				game:GetService("StarterGui"):SetCore("SendNotification",{
+					Title = "تم نقلك عند الاعب";
+					Text = "";
+					Duration = 3.5;
+				})
+				break
+			end
 		end
-	end
-end)
+	
+	end)
 
-TPbox.Name = "TPbox"
-TPbox.Parent = Frame
-TPbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TPbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TPbox.BorderSizePixel = 0
-TPbox.Position = UDim2.new(0.247721687, 0, 0.38700375, 0)
-TPbox.Size = UDim2.new(0, 239, 0, 50)
-TPbox.Font = Enum.Font.SourceSansBold
-TPbox.Text = "Enter Target Player Name"
-TPbox.TextColor3 = Color3.fromRGB(0, 0, 0)
-TPbox.TextScaled = true
-TPbox.TextSize = 14.000
-TPbox.TextWrapped = true
+TeleportB.Name = "TeleportB"
+TeleportB.Parent = Frame
+TeleportB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TeleportB.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TeleportB.BorderSizePixel = 0
+TeleportB.Position = UDim2.new(0.247721687, 0, 0.38700375, 0)
+TeleportB.Size = UDim2.new(0, 239, 0, 50)
+TeleportB.Font = Enum.Font.SourceSansBold
+TeleportB.Text = "Enter Target Player Name"
+TeleportB.TextColor3 = Color3.fromRGB(0, 0, 0)
+TeleportB.TextScaled = true
+TeleportB.TextSize = 14.000
+TeleportB.TextWrapped = true
 
-UICorner_4.Parent = TPbox
+UICorner_4.Parent = TeleportB
 
-coroutine.wrap(BPTMPBK_fake_script)()
+-- Scripts:
+
+local function AZCJ_fake_script() -- teleportB.LocalScript 
+	local script = Instance.new('LocalScript', teleportB)
+
+	teleportB.MouseButton1Down:content(function
+	
+		local playerName = TeleportB.Text
+		local players = game:GetService("Players"):GetPlayers()
+		for i, player in ipairs(players) do
+			if player.Name:sub(1, #playerName):lower() == playerName:lower() then
+				game.Players.LocalPlayer.Character:MoveTo(player.Character.HumanoidRootPart.Position)
+				game:GetService("StarterGui"):SetCore("SendNotification",{
+					Title = "تم نقلك عند الاعب";
+					Text = "";
+					Duration = 3.5;
+				})
+				break
+			end
+		end
+	
+	end)
+	
+end
+coroutine.wrap(AZCJ_fake_script)()

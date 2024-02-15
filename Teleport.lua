@@ -59,23 +59,23 @@ teleportB.TextWrapped = true
 
 UICorner_3.Parent = teleportB
 
-teleportB.MouseButton1Down:content(function
-	
-		local playerName = TeleportB.Text
-		local players = game:GetService("Players"):GetPlayers()
-		for i, player in ipairs(players) do
-			if player.Name:sub(1, #playerName):lower() == playerName:lower() then
-				game.Players.LocalPlayer.Character:MoveTo(player.Character.HumanoidRootPart.Position)
-				game:GetService("StarterGui"):SetCore("SendNotification",{
-					Title = "تم نقلك عند الاعب";
-					Text = "";
-					Duration = 3.5;
-				})
-				break
-			end
-		end
-	
-	end)
+-- تم تغيير content إلى connect لربط الحدث بالوظيفة
+teleportB.MouseButton1Down:connect(function	
+    local playerName = TeleportB.Text
+    local players = game:GetService("Players"):GetPlayers()
+    for i, player in ipairs(players) do
+        if player.Name:sub(1, #playerName):lower() == playerName:lower() then
+            game.Players.LocalPlayer.Character:MoveTo(player.Character.HumanoidRootPart.Position)
+            game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "تم نقلك عند الاعب";
+                Text = "";
+                Duration = 3.5;
+            })
+            break
+        end
+    end
+
+end)
 
 TeleportB.Name = "TeleportB"
 TeleportB.Parent = Frame
@@ -93,28 +93,4 @@ TeleportB.TextWrapped = true
 
 UICorner_4.Parent = TeleportB
 
--- Scripts:
-
-local function AZCJ_fake_script() -- teleportB.LocalScript 
-	local script = Instance.new('LocalScript', teleportB)
-
-	teleportB.MouseButton1Down:content(function
-	
-		local playerName = TeleportB.Text
-		local players = game:GetService("Players"):GetPlayers()
-		for i, player in ipairs(players) do
-			if player.Name:sub(1, #playerName):lower() == playerName:lower() then
-				game.Players.LocalPlayer.Character:MoveTo(player.Character.HumanoidRootPart.Position)
-				game:GetService("StarterGui"):SetCore("SendNotification",{
-					Title = "تم نقلك عند الاعب";
-					Text = "";
-					Duration = 3.5;
-				})
-				break
-			end
-		end
-	
-	end)
-	
-end
-coroutine.wrap(AZCJ_fake_script)()
+coroutine.wrap(CPIOH_fake_script)()

@@ -60,7 +60,7 @@ teleportB.TextWrapped = true
 UICorner_3.Parent = teleportB
 
 -- تم تغيير content إلى connect لربط الحدث بالوظيفة
-teleportB.MouseButton1Down:connect(function	
+teleportB.MouseButton1Down:connect(function()	
     local playerName = TeleportB.Text
     local players = game:GetService("Players"):GetPlayers()
     for i, player in ipairs(players) do
